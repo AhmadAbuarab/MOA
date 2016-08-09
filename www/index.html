@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>My App</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="stylesheet" href="Framework7-1.4.0/dist/css/framework7.material.css">
+        <link rel="stylesheet" href="Framework7-1.4.0/dist/css/framework7.material.colors.min.css">
+        <link rel="stylesheet" type="text/css" href="style/ara.css">
+        <style>
+            /* grid css */
+
+            .grid{
+                width: 90%;
+                height: auto;
+                background-color: #fff;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+                margin: 0 auto;
+                padding: 20px;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            .grid ul{
+                width: 100%;
+
+            }
+            .grid ul li{
+                height: 35px;
+                line-height: normal;
+                padding-top: 10px;
+                width: 95%;
+            }
+            .grid ul li small{
+                border-left: 1px solid #ccc;
+                float: right;
+                width: 40%;
+                max-width: 40%;
+                font-size: 10px;
+            }
+            .grid ul li span{
+                width: 59%;
+                font-size: 10px;
+                display: block;
+                float: left;
+                line-height: 14px;
+                white-space: inherit;
+            }
+            .grid ul li:nth-child(odd){
+                background-color: #efefef;
+            }
+
+            /* end grid css */
+        </style>
+
+
+        <script id="agricultural-template" type="text/x-handlebars-template">
+            <div class="grid">
+                {{#each agriculturalLocationsData}}
+                    <ul>
+                      <li><span>{{ifCond AgrLocSerialNo}}</span> <small>رقم السجل الزراعي</small> </li>
+                      <li><span>{{ifCond Center}}</span> <small>الجهة الرئيسية - الادارة العامة</small> </li>
+                      <li><span>{{ifCond LabBranchDesc}}</span> <small>الجهة مقدمة الخدمة /ادارة عامة -مديرية - فرع</small> </li>
+                      <li><span>{{ifCond LocationId}}</span> <small>رمز الموقع</small> </li>
+                      <li><span>{{ifCond LocationName}}</span> <small>اسم الموقع</small> </li>
+                      <li><span>{{ifCond OldSystemBranch}}</span> <small>الفرع حسب النظام القديم</small> </li>
+                      <li><span>{{ifCond Village}}</span> <small>القرية</small> </li>
+                      <li><span>{{ifCond ListOfMoaAgriOwners.MoaAgriOwners.CRSNumber}}</span> <small>السجل المدني</small> </li>
+                      <li><span>{{ifCondListOfMoaAgriOwners.MoaAgriOwners.CompanyRegNumber}}</span> <small>السجل التجاري</small> </li>
+                      <li><span>{{ifCond ListOfMoaAgriOwners.MoaAgriOwners.EstablishmentName}}</span> <small>اسم المؤسسة</small> </li>
+                      <li><span>{{ifCond ListOfMoaAgriOwners.MoaAgriOwners.FullName2}}</span> <small>اسم المالك</small> </li>
+                      <li><span>{{ifCond ListOfMoaAgriOwners.MoaAgriOwners.FullNameArabic}}</span> <small>اسم المالك عربي</small> </li>
+                    </ul>
+                 {{/each}}
+            </div>     
+        
+        </script>
+
+        <script id="application-template" type="text/x-handlebars-template">
+            {{#each applicationData}}
+            <div class="grid">
+                <ul>
+                  <li><span>{{ifCond CRSNo}}</span> <small>الاسم</small> </li>
+                  <li><span>{{ifCond ApplicantLastName}}</span> <small>العائلة</small> </li>
+                  <li><span>{{ifCond ApplicantSecondName}}</span> <small>اسم الاب</small> </li>
+                  <li><span>{{ifCond ArrivalPortDesc}}</span> <small>المحجر</small> </li>
+                  <li><span>{{ifCond BUName}}</span> <small>الجهة المختصة</small> </li>
+                  <li><span>{{ifCond CRNNo}}</span> <small>رقم السجل التجاري</small> </li>
+                  <li><span>{{ifCond OrganizationName}}</span> <small>اسم المؤسسة</small> </li>
+                  <li><span>{{ifCond SerialNumber}}</span> <small>الرقم المتسلسل</small> </li>
+                  <li><span>{{ifCond Status}}</span> <small>الحالة</small> </li>
+                  <li><span>{{ifCond SubType}}</span> <small>النوع الفرعي</small> </li>
+                  <li><span>{{ifCond Type}}</span> <small>نوع المعاملة</small> </li>
+                  <li><span>{{ifCond ResidenceNo}}</span> <small>رقم الاقامة</small> </li>
+                  <li><span>{{ifCond ExportingCompanyName}}</span> <small>اسم الشركة المصدرة</small> </li>
+                </ul>
+            </div>          
+            {{/each}}
+
+        </script>
+    </head>
+    <body>
+        <!-- intro page -->
+        <div id="introLoading">
+
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+            <span class="line4"></span>
+
+            <div class="welcome">
+                <span> Welcome to </span> <strong>Ministry Of Agriculture</strong> 
+            </div>
+
+        </div>
+        <!-- end intro page -->
+
+        <div class="views">
+            <div class="view view-main">
+                <div class="pages navbar-fixed toolbar-fixed">
+                    <div data-page="index" class="page">
+                        <div class="page-content infinite-scroll" data-distance="100">
+
+                            <div class="content-block ">
+                                <div class="row">
+                                    <div class="col-50 tablet-50">
+                                        <div class="homeArea">
+                                            <img src="images/logoIntro.png">
+                                            <a href="home.html">دخول</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>          
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="panel-overlay"></div>
+        <div class="panel panel-left panel-reveal">
+            <div class="content-block">
+                <div class="colse_menu close-panel"><a href="#" class="close-panel"><i class="fa fa-times"></i></a></div>
+                <ul>
+                    <li><a href="#"> <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                            طلب إذن استيراد ميدات زراعية </a></li>
+                    <li><a href="#"> <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                            طلب إذن فسح مبيدات زراعية </a></li>
+                    <li><a href="#"> <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                            طلب إذن استيراد بذور أو شتالت </a></li>
+                    <li><a href="#"> <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                            طلب إذن فسح بذور أو شتالت </a></li>
+                    <li><a href="#"> <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                            من أحداث الوزارة في الشهر </a></li>
+                    <li><a href="#"> <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                            الخطر الحيواني والنباتي قائمة </a></li>
+                    <li><a href="#"> <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                            لموظفي وزارة الزراعة دليل قرارات </a></li>
+                    <li><a href="#"> <i class="fa fa-dot-circle-o" aria-hidden="true"></i> </a>
+                        التقاعد السنوي</li>
+
+                </ul>
+
+
+            </div>
+        </div>
+
+        <script src="js/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="Framework7-1.4.0/dist/js/framework7.min.js"></script>
+        <script src="js/handlebars-v4.0.5.js"></script>
+        <script type="text/javascript" src="js/services.js"></script>
+        <script type="text/javascript" src="js/MOA-js.js"></script>
+        <script type="text/javascript" src="Framework7-1.4.0/dist/js/my-app.js"></script>
+    </body>
+
+</html>              
