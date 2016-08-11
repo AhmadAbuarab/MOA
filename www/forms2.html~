@@ -48,7 +48,7 @@
                                                         <div class="item-title label">رقم الاقامة </div>
                                                         <div class="item-input">
                                                             <!-- Make sure that input have "name attrobute" -->
-                                                            <input id="rn" class="input-field" type="text" name="rn" placeholder="رقم السجل المدني">
+                                                            <input id="rn" class="input-field" type="text" name="No2" placeholder="رقم السجل المدني">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -79,7 +79,7 @@
                                                         <div class="item-title label"> السجل التجاري </div>
                                                         <div class="item-input">
                                                             <!-- Make sure that input have "name attrobute" -->
-                                                            <input id="crn" class="input-field" type="text" name="crn" placeholder="الإدارة العامة">
+                                                            <input id="crn" class="input-field" type="text" name="text" placeholder="الإدارة العامة">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -90,7 +90,7 @@
                                                         <div class="item-title label">الجهة المعنية</div>
                                                         <div class="item-input">
                                                             <!-- Make sure that input have "name attrobute" -->
-                                                            <input id="postion" class="input-field" type="text" name="postion" placeholder="الإدارة العامة">
+                                                            <input id="postion" class="input-field" type="text" name="text" placeholder="الإدارة العامة">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -101,7 +101,7 @@
                                                         <div class="item-title label">المحجر </div>
                                                         <div class="item-input">
                                                             <!-- Make sure that input have "name attrobute" -->
-                                                            <input id="port" class="input-field" type="text" name="port" placeholder="الإدارة العامة">
+                                                            <input id="port" class="input-field" type="text" name="text" placeholder="الإدارة العامة">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -112,7 +112,7 @@
                                                         <div class="item-title label">الرقم المسلسل </div>
                                                         <div class="item-input">
                                                             <!-- Make sure that input have "name attrobute" -->
-                                                            <input id="sn" class="input-field" type="text" name="sn" placeholder="الإدارة العامة">
+                                                            <input id="sn" class="input-field" type="text" name="text" placeholder="الإدارة العامة">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -168,7 +168,7 @@
                                                         <div class="item-title label">السجل المدني</div>
                                                         <div class="item-input">
                                                             <!-- Make sure that input have "name attrobute" -->
-                                                            <input id="srn" class="input-field" type="text" name="srn" placeholder="الإدارة العامة">
+                                                            <input id="srn" class="input-field" type="text" name="text" placeholder="الإدارة العامة">
                                                         </div>
                                                     </div>
                                                 </div>

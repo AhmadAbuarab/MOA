@@ -58,7 +58,7 @@ myApp.onPageInit('forms', function (page) {
                 var dataRes = dataArray["Body"]["MOA_spcAgricultural_spcLocations_spcQuery_spcWS_spcWF_Output"]["ListOfMoa_Agricultural_Locations_Io"]["MoaAgriculturalLocations"];
 
             if (dataRes != '') {
-//                localStorage.setItem('agriculturalLocationsData', dataRes);
+                localStorage.setItem('agriculturalLocationsData', dataRes);
 
                 var source = $("#agricultural-template").html();
                 var template = Handlebars.compile(source);
@@ -97,7 +97,7 @@ myApp.onPageInit('forms2', function (page) {
 
 
             if (dataRes != '') {
-//                localStorage.setItem('applicationData', dataRes);
+                localStorage.setItem('applicationData', dataRes);
 
                 var source = $("#application-template").html();
                 var template = Handlebars.compile(source);
@@ -108,5 +108,4 @@ myApp.onPageInit('forms2', function (page) {
         });
     });
 });
-
 

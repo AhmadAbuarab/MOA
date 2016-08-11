@@ -59,7 +59,7 @@
                                                         <div class="item-title label">السجل الرزاعي</div>
                                                         <div class="item-input">
                                                             <!-- Make sure that input have "name attrobute" -->
-                                                            <input id="arg_no" class="input-field" type="text" name="arg_no" placeholder="السجل الرزاعي">
+                                                            <input id="arg_no" class="input-field" type="text" name="No2" placeholder="رقم السجل المدني">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -70,7 +70,7 @@
                                                         <div class="item-title label">الادارة العامة</div>
                                                         <div class="item-input">
                                                             <!-- Make sure that input have "name attrobute" -->
-                                                            <input id="agr_center" class="input-field" type="text" name="agr_center" placeholder="الادارة العامة">
+                                                            <input id="agr_center" class="input-field" type="text" name="No2" placeholder="رقم السجل المدني">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -81,7 +81,7 @@
                                                         <div class="item-title label"> السجل المدني</div>
                                                         <div class="item-input">
                                                             <!-- Make sure that input have "name attrobute" -->
-                                                            <input id="owner_no" class="input-field" type="text" name="owner_no" placeholder="السجل المدني">
+                                                            <input id="owner_no" class="input-field" type="text" name="text" placeholder="الإدارة العامة">
                                                         </div>
                                                     </div>
                                                 </div>

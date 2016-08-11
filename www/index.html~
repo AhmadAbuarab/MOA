@@ -2,7 +2,7 @@
 <html>
     <head>
 
-        <title>MOA</title>
+        <title>My App</title>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
@@ -40,11 +40,11 @@
                 float: right;
                 width: 40%;
                 max-width: 40%;
-                font-size: 12px;
+                font-size: 10px;
             }
             .grid ul li span{
                 width: 59%;
-                font-size: 12px;
+                font-size: 10px;
                 display: block;
                 float: left;
                 line-height: 14px;
@@ -92,7 +92,7 @@
                   <li><span>{{ifCond CRNNo}}</span> <small>رقم السجل التجاري</small> </li>
                   <li><span>{{ifCond OrganizationName}}</span> <small>اسم المؤسسة</small> </li>
                   <li><span>{{ifCond SerialNumber}}</span> <small>الرقم المتسلسل</small> </li>
-                  <li><span style="color:#004b00; font-weight:bold;">{{ifCond Status}}</span> <small>الحالة</small> </li>
+                  <li><span>{{ifCond Status}}</span> <small>الحالة</small> </li>
                   <li><span>{{ifCond SubType}}</span> <small>النوع الفرعي</small> </li>
                   <li><span>{{ifCond Type}}</span> <small>نوع المعاملة</small> </li>
                   <li><span>{{ifCond ResidenceNo}}</span> <small>رقم الاقامة</small> </li>
