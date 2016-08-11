@@ -30,7 +30,11 @@
     <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
     <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
-    <icon src="icon.png" />
+
+    <icon src="img/beer_72.png" width="72" height="72" />
+    <icon src="img/beer_48.png" width="48" height="48" />
+    <icon src="img/beer_36.png" width="36" height="36" />
+
     <platform name="android">
         <!--<icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />-->
         <!--<icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />-->
